@@ -1,0 +1,26 @@
+body{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    flex-direction: column;
+}
+
+
+select{
+    width: 170px;
+    height: 60px;
+    border: 4px solid black;
+    border-radius: 10px;
+}
+
+form{
+    word-spacing: 15px;
+}
+
+.range{
+    margin-top: 100px;
+    width: 500px;
+    
+}
