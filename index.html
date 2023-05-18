@@ -4,33 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conversor de temperatura</title>
+    <title>Temperature conversor</title>
     <script type= "text/javascript"src="index.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <h1 class="titulo">Temperature Conversor</h1>
 
     <form action="convertion">
     
-    De:
-    <select>
-        <option value="opcao1">Opção 1</option>
-        <option value="opcao2">Opção 2</option>
-        <option value="opcao3">Opção 3</option>
+    
+    <select id="fromSelect" name="fromSelect">
+        <option value="Celcius">Celcius</option>
+        <option value="Farenheit">Farenheit</option>
+        <option value="Kelvin">Kelvin</option>
     </select>
       
-        Para:
+        &#129062;
   
-    <select>
-        <option value="opcao1">Opção 1</option>
-        <option value="opcao2">Opção 2</option>
-        <option value="opcao3">Opção 3</option>
+    <select id="toSelect" name="toSelect">
+        <option value="Celcius">Celcius</option>
+        <option value="Farenheit">Farenheit</option>
+        <option value="Kelvin">Kelvin</option>
     </select>
 
     <br>
-    <input class="range" type="range">
+    <input type="range" id="temp" name="temp" value="0" min="0" max="300"
+    oninput="display.value=value" onchange="display.value=value">
+
+    <input type="text" id="display" value="0"
+    oninput="temp.value=value" onchange="temp.value=value">
+
+
     </form>
 
+    <button onclick="convertTemperature()">Convert</button>
+
+    
 </body>
 </html>

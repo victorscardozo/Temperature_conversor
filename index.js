@@ -1,31 +1,55 @@
-function convertTemp(direction)
-{
- //instanciando objetos
-var fObj = document.convert.ftemp, cObj = document.convert.ctemp, kObj = document.convert.ktemp;
+function convertTemperature() {
 
-//definindo direções para conversões
-if (direction == "ftoc") 
-{
-    cObj.value = Math.round((fObj.value - 32) * (5/9));
-	kObj.value = Math.round((parseInt(cObj.value) + 459.67) * (5/9));
-} 
-else if (direction == "ktof") 
- {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) -  459.67);
-	cObj.value = Math.round((fObj.value - 32) * (5/9));
+
+	var fromSelect = document.getElementById('fromSelect');
+	var toSelect = document.getElementById('toSelect');
+	var temp = document.getElementById('temp');
+
+
+	var fromUnit = fromSelect.value;
+	var toUnit = toSelect.value;
+	var temperature = temp.value;
+
+
+	var convertedTemperature;
+
+	if (fromUnit === 'Celcius') {
+		if (toUnit === 'Farenheit') {
+			convertedTemperature = (temperature * 9 / 5) + 32;
+		} else if (toUnit === 'Kelvin') {
+			convertedTemperature = parseFloat(temperature) + 273.15;
+		} else {
+			convertedTemperature = temperature;
+		}
+
+
+
+	} else if (fromUnit === 'Farenheit') {
+		if (toUnit === 'Celcius') {
+			convertedTemperature = (temperature - 32) * 5 / 9;
+		} else if (toUnit === 'Kelvin') {
+			convertedTemperature = (temperature - 32) * 5 / 9 + 273.15;
+		} else {
+			convertedTemperature = temperature;
+		}
+
+
+
+	} else if (fromUnit === 'Kelvin') {
+		if (toUnit === 'Celcius') {
+			convertedTemperature = temperature - 273.15;
+		} else if (toUnit === 'Farenheit') {
+			convertedTemperature = (temperature - 273.15) * 9 / 5 + 32;
+		} else {
+			convertedTemperature = temperature;
+		}
+
+
+	} else {
+		convertedTemperature = temperature;
+	}
+
+
 	
- }
-else
- {
-	fObj.value = Math.round((parseInt(cObj.value) * (9/5)) + 32);
-	kObj.value = Math.round((parseInt(cObj.value) + 273));
- }
+	alert(convertedTemperature);
 }
-
-function clearAll()
-{
-document.convert.ftemp.value="";
-document.convert.ctemp.value="";
-document.convert.ktemp.value="";
-}
-
