@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>Temperature conversor</title>
     <script type= "text/javascript"src="index.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
+
+    <div class="divBody">
+
+
+
     <h1 class="titulo">Temperature Conversor</h1>
 
     <form action="convertion">
@@ -21,7 +30,7 @@
         <option value="Kelvin">Kelvin</option>
     </select>
       
-        &#129062;
+    <i class="fa-solid fa-arrow-right fa-2sm arrow1"></i>
   
     <select id="toSelect" name="toSelect">
         <option value="Celcius">Celcius</option>
@@ -30,17 +39,36 @@
     </select>
 
     <br>
-    <input type="range" id="temp" name="temp" value="0" min="0" max="300"
-    oninput="display.value=value" onchange="display.value=value">
 
-    <input type="text" id="display" value="0"
+    <div class="divRange">
+
+    <input class="range" type="range" id="temp" name="temp" value="0" min="-273" max="374"
+    oninput="display.value=value" onchange="display.value=value">
+    
+    <input class="rangeValue" type="text" id="display" value="0"
     oninput="temp.value=value" onchange="temp.value=value">
+
+    </div>
+
+
+    
 
 
     </form>
 
+
     <button onclick="convertTemperature()">Convert</button>
 
-    
+
+    </div>
+
+    <div class="divArrow2" >
+        
+        <i class="fa-solid fa-arrow-right fa-2xl arrow2"></i> 
+        <h1 id="resultText"></h1>
+        
+    </div>
+
+
 </body>
 </html>

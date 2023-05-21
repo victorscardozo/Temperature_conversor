@@ -1,9 +1,9 @@
 body{
     margin-top: 70px;
+    margin-left: -800px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -11,6 +11,7 @@ body{
 
 .titulo{
     margin-bottom: 130px;
+    margin-left: 17px;
 }
 
 
@@ -20,16 +21,24 @@ select{
     border: 4px solid rgb(37, 37, 37);
     border-radius: 10px;
     background-color: lightslategray;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
     position: relative;
     left: 60px;
 }
 
 form{
     word-spacing: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    
+    
 }
 
 input[type="range"]{
-    margin-top: 40px;
+    margin-top: 90px;
     width: 500px;
     justify-content: center;
     align-items: center;
@@ -43,13 +52,87 @@ button{
     border: 4px solid rgb(37, 37, 37);
     background-color: lightslategray;
     cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
 }
 
-#display{
-    width: 30px;
-    border-color: transparent;
+
+
+[type = "range"]{
+    appearance: none;
+    display: block;
+    background-color: transparent;
+    border: 3px solid lightslategray;
+    border-radius: 10px;
+    padding: 7px;
+    outline: none;
+}
+
+[type = "range"]::-webkit-slider-thumb{
+    appearance: none;
+    display: block;
+    width: 3px;
+    height: 27px;
+    background-color: black;
+}
+
+.divRange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rangeValue{
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+    width: 50px;
     margin-left: -20px;
+    text-align: center;
+    border-color: transparent;
+    background-color: transparent;
     position: relative;
     top: -4px;
+    left: 13px;
 }
 
+.arrow1{
+    position: relative;
+    left: 60px;
+}
+
+
+.arrow2{
+    position: fixed;
+}
+
+.divArrow2{
+    display: flex;
+    width: 150px;
+    height: 72px;
+    position: relative;
+    left: 140px;
+    top: 60px;
+
+    
+    
+    
+}
+
+#resultText {
+    position: inherit;
+    left: 170px;
+    top: -55px;
+    
+}
+    
+
+
+.divBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
