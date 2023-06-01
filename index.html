@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Temperature conversor</title>
+    <script type= "text/javascript"src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="divBody">
+
+
+
+    <h1 class="titulo">Temperature Conversor</h1>
+
+    <form action="convertion">
+    
+    
+    <select id="fromSelect" name="fromSelect">
+        <option value="Celcius">Celcius</option>
+        <option value="Farenheit">Farenheit</option>
+        <option value="Kelvin">Kelvin</option>
+    </select>
+      
+    <i class="fa-solid fa-arrow-right fa-2sm arrow1"></i>
+  
+    <select id="toSelect" name="toSelect">
+        <option value="Celcius">Celcius</option>
+        <option value="Farenheit">Farenheit</option>
+        <option value="Kelvin">Kelvin</option>
+    </select>
+
+    <br>
+
+    <div class="divRange">
+
+    <input class="range" type="range" id="temp" name="temp" value="0" min="-273" max="374"
+    oninput="display.value=value" onchange="display.value=value">
+    
+    <input class="rangeValue" type="text" id="display" value="0"
+    oninput="temp.value=value" onchange="temp.value=value">
+
+    </div>
+    
+
+
+    </form>
+
+
+    <button onclick="convertTemperature()">Convert</button>
+
+
+    </div>
+
+    <div class="divArrow2" >
+        
+        <i class="fa-solid fa-arrow-right fa-2xl arrow2"></i> 
+        <h1 id="resultText"></h1>
+        
+    </div>
+
+
+</body>
+</html>
