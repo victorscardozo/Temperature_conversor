@@ -96,6 +96,13 @@ button{
     left: 135px;
 }
 
+input#display.rangeValue{
+   
+    
+    position: relative;
+    left: 86px;
+}
+
 .arrow1{
     position: relative;
     left: 60px;
