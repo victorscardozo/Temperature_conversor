@@ -1,3 +1,5 @@
+// Escrevi o código em inglês para facilitar o entendimento geral, para quem seja que estiver lendo.
+
 function convertTemperature() {
 
 
