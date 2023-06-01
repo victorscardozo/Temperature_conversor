@@ -87,15 +87,13 @@ button{
     margin-top: 20px;
     font-size: 20px;
     width: 50px;
-    margin-left: -20px;
+    margin-left: 150px;
     text-align: center;
     border-color: transparent;
     background-color: transparent;
     position: relative;
     top: -4px;
     left: 13px;
-    align-items: center;
-    justify-content: center;
 }
 
 .arrow1{
