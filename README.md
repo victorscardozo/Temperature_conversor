@@ -1,3 +1,1 @@
-            Código no Github Pages
-                      👇👇
-https://victorscardozo.github.io/Temperature_conversor/
+You can visualize the Temperature conversor by accessing: https://victorscardozo.github.io/Temperature_conversor/
